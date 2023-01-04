@@ -76,5 +76,17 @@ let newProduct = document.createElement('article');
 // Tips
 // Events
 // 14. Lyssna efter ett klick på logotypen (.logo). När den registrerar ett klick skall du console.log:a "found you!";
-            
+let logotypen = document.querySelector('header > img'); 
+logotypen.addEventListener('click', ()=>{
+    console.log('found you!');
+}); 
 // 15. Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du console.log:a "Hi, Im article Fire / Ash / Water".
+
+let articles = document.querySelectorAll('main > article');
+articles.forEach(article => {
+    let title = article.querySelector('h3'); 
+    article.addEventListener('click', ()=> {
+        console.log(`Hi, Im article ${title.innerText}`);
+    });
+
+});
